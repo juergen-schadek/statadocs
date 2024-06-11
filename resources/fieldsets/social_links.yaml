@@ -1,0 +1,37 @@
+title: 'Social Links'
+fields:
+  -
+    handle: social_links
+    field:
+      add_row: 'Add link'
+      type: grid
+      display: 'Social Links'
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+            width: 25
+            validate:
+              - required
+        -
+          handle: link
+          field:
+            input_type: url
+            type: text
+            display: Link
+            width: 50
+            validate:
+              - required
+        -
+          handle: icon
+          field:
+            max_files: 1
+            folder: icons
+            restrict: true
+            type: assets
+            display: Icon
+            width: 25
+            validate:
+              - required

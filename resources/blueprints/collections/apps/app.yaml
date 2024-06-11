@@ -1,0 +1,102 @@
+title: Application
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: Title
+              listable: true
+          -
+            handle: link
+            field:
+              type: link
+              display: Link
+          -
+            handle: content
+            field: markdown.markdown
+            config:
+              display: Content
+          -
+            handle: layout
+            field:
+              type: template
+              display: Layout
+              localizable: true
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate:
+                - required
+                - 'max:200'
+              display: Slug
+              show_regenerate: true
+          -
+            handle: favorite
+            field:
+              type: toggle
+              display: Favorite
+          -
+            handle: icon
+            field:
+              max_files: 1
+              min_files: 1
+              mode: grid
+              container: assets
+              folder: icons
+              show_set_alt: false
+              type: assets
+              display: Icon
+              validate:
+                - required
+          -
+            handle: categories
+            field:
+              type: terms
+              taxonomies:
+                - categories
+              display: Categories
+              mode: select
+              listable: true
+              max_items: 1
+              validate:
+                - required
+          -
+            handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              display: Tags
+              mode: select
+  SEO:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: seo
+            field:
+              type: seo_pro
+              listable: false
+              display: SEO

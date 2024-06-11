@@ -1,0 +1,77 @@
+<div x-data="{ themeSwitcherOpen: false }" class="relative">
+    <button
+        x-on:click="themeSwitcherOpen = ! themeSwitcherOpen"
+        type="button"
+        class="-m-2.5 p-2.5"
+        id="theme-switcher-button"
+        :aria-expanded="themePickerOpen"
+        aria-haspopup="true"
+    >
+        <span class="sr-only">Thema</span>
+        <span
+            class="dark:hidden"
+            :class="themePreference != 'system' ? 'fill-primary' : 'fill-themepicker-icon'"
+            aria-hidden="true"
+        >
+            {{ svg class="h-6 w-6" src="assets/icons/light-mode" }}
+        </span>
+        <span
+            class="hidden dark:block"
+            :class="themePreference != 'system' ? 'fill-primary' : 'fill-themepicker-icon'"
+            aria-hidden="true"
+        >
+            {{ svg class="h-6 w-6" src="assets/icons/dark-mode" }}
+        </span>
+    </button>
+    <ul
+        x-cloak
+        x-show="themeSwitcherOpen"
+        @click.outside="themeSwitcherOpen = false"
+        @keydown.window.escape="themeSwitcherOpen = false"
+        class="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-themepicker-bg py-2 shadow-lg ring-1 ring-themepicker-ring/5 focus:outline-none dark:bg-dark-themepicker-bg dark:ring-dark-themepicker-ring/5"
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="theme-switcher-button"
+        tabindex="-1"
+    >
+        <li
+            x-on:click="setThemePreference('light'); themeSwitcherOpen = false"
+            class="flex cursor-pointer select-none px-3 py-1 text-sm leading-6 hover:bg-themepicker-text-bg-hover dark:fill-submenu-inverted dark:text-submenu-inverted hover:dark:bg-dark-themepicker-text-bg-hover"
+            :class="themePreference != 'system' ? 'text-primary fill-primary' : 'text-submenu fill-submenu'"
+            role="menuitem"
+            tabindex="-1"
+            id="theme-switcher-light"
+        >
+            <div class="flex items-center gap-x-3">
+                {{ svg class="h-4 w-4" src="/assets/icons/light-mode" }}
+                Hell
+            </div>
+        </li>
+        <li
+            x-on:click="setThemePreference('dark'); themeSwitcherOpen = false"
+            class="flex cursor-pointer select-none fill-submenu px-3 py-1 text-sm leading-6 text-submenu hover:bg-themepicker-text-bg-hover hover:dark:bg-dark-themepicker-text-bg-hover"
+            :class="themePreference != 'system' ? 'dark:text-primary dark:fill-primary dark:bg-dark-themepicker-text-bg-hover/40' : 'dark:text-submenu-inverted dark:fill-submenu-inverted'"
+            role="menuitem"
+            tabindex="-1"
+            id="theme-switcher-dark"
+        >
+            <div class="flex items-center gap-x-3">
+                {{ svg class="h-4 w-4" src="/assets/icons/dark-mode" }}
+                Dunkel
+            </div>
+        </li>
+        <li
+            x-on:click="setThemePreference('system'); themeSwitcherOpen = false"
+            class="flex cursor-pointer select-none px-3 py-1 text-sm leading-6 hover:bg-themepicker-text-bg-hover hover:dark:bg-dark-themepicker-text-bg-hover"
+            :class="themePreference == 'system' ? 'text-primary fill-primary dark:bg-dark-themepicker-text-bg-hover' : 'text-submenu fill-submenu dark:text-submenu-inverted dark:fill-submenu-inverted'"
+            role="menuitem"
+            tabindex="-1"
+            id="theme-switcher-system"
+        >
+            <div class="flex items-center gap-x-3">
+                {{ svg class="h-4 w-4" src="/assets/icons/system-mode" }}
+                System
+            </div>
+        </li>
+    </ul>
+</div>

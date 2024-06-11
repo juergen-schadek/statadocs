@@ -1,0 +1,55 @@
+<nav class="flex flex-1 flex-col">
+    <ul role="list" class="flex flex-1 flex-col gap-y-7">
+        <li>
+            <ul role="list" class="-mx-2 space-y-1">
+                {{ nav:primary_menu }}
+                    <li>
+                        <a
+                            class="{{ is_current || is_parent ? "bg-menu-text-bg-hover text-primary dark:bg-dark-menu-text-bg-hover" : "text-menu hover:bg-menu-text-bg-hover hover:text-primary dark:text-menu-inverted dark:hover:bg-dark-menu-text-bg-hover" }} group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6"
+                            href="{{ url }}"
+                        >
+                            {{ svg class="h-6 w-6 shrink-0 {is_current || is_parent ? 'text-primary' : 'text-text-inverted group-hover:text-primary'}" :src="icon" }}
+                            {{ title }}
+                        </a>
+                    </li>
+                {{ /nav:primary_menu }}
+            </ul>
+        </li>
+        <li>
+            <div class="text-xs font-semibold leading-6 text-text-inverted">
+                Favoriten
+            </div>
+            {{ collection from="apps|bookmarks" favorite:is="true" as="favorites" }}
+                {{ if !no_results }}
+                    <ul role="list" class="-mx-2 mt-2 space-y-1">
+                        {{ favorites }}
+                            <li>
+                                <a
+                                    class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-menu hover:bg-menu-text-bg-hover hover:text-primary dark:text-menu-inverted dark:hover:bg-dark-menu-text-bg-hover"
+                                    href="{{ link }}"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border-2 border-border bg-element font-medium text-text-inverted group-hover:border-primary group-hover:text-primary dark:bg-dark-element"
+                                    >
+                                        {{ svg class="h-3 w-3 shrink-0 text-text-inverted fill-text-inverted group-hover:text-primary group-hover:fill-primary" :src="icon" }}
+                                    </span>
+                                    <span class="truncate">{{ title }}</span>
+                                </a>
+                            </li>
+                        {{ /favorites }}
+                    </ul>
+                {{ /if }}
+            {{ /collection }}
+        </li>
+        <li class="mt-auto">
+            <a
+                href="{{ config:statamic:cp:route }}"
+                class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-menu hover:bg-menu-text-bg-hover hover:text-primary dark:text-menu-inverted dark:hover:bg-dark-menu-text-bg-hover"
+            >
+                {{ svg class="h-6 w-6 shrink-0 text-text-inverted group-hover:text-primary" src="assets/icons/outline/cog-6-tooth" }}
+                Einstellungen
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,9 @@
+{
+    "name": "juergen-schadek/statadocs",
+    "extra": {
+        "statamic": {
+            "name": "StataDocs",
+            "description": "StataDocs starter kit"
+        }
+    }
+}

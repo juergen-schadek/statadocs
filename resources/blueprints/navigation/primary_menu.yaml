@@ -1,0 +1,16 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: icon
+            field:
+              max_files: 1
+              mode: grid
+              container: assets
+              folder: icons
+              show_set_alt: false
+              type: assets
+              display: Icon

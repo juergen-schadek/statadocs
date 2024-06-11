@@ -1,0 +1,83 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: General
+        fields:
+          -
+            handle: site_title
+            field:
+              type: text
+              display: 'Site title'
+              validate:
+                - required
+          -
+            handle: site_description
+            field:
+              type: text
+              display: 'Site description'
+          -
+            handle: site_logo
+            field:
+              max_files: 1
+              mode: grid
+              type: assets
+              display: 'Site logo'
+          -
+            handle: site_author
+            field:
+              type: text
+              display: 'Site author'
+              validate:
+                - required
+          -
+            import: social_links
+          -
+            handle: copyright
+            field:
+              antlers: true
+              type: textarea
+              display: Copyright
+      -
+        display: Design
+        fields:
+          -
+            handle: theme
+            field:
+              options:
+                theme-lighthouse: Lighthouse
+              clearable: true
+              type: select
+              display: Theme
+          -
+            handle: typography
+            field:
+              options:
+                prose-lighthouse: Lighthouse
+              clearable: true
+              type: select
+              display: Typography
+      -
+        display: Meta-Informations
+        fields:
+          -
+            handle: meta_informations_icons
+            field:
+              type: textarea
+              display: Icons
+          -
+            handle: meta_informations_cookie_banner
+            field:
+              type: textarea
+              display: Cookie-Banner
+          -
+            handle: meta_informations_google_analytics
+            field:
+              type: textarea
+              display: 'Google Analytics'
+          -
+            handle: meta_informations_rss_feed
+            field:
+              type: text
+              display: RSS-Feed

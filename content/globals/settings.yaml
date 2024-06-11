@@ -1,0 +1,43 @@
+title: Settings
+data:
+  site_title: StataRocket
+  site_description: "A Starter Kit for Statamic"
+  site_logo: icons/outline/rocket-launch.svg
+  site_author: "Jürgen Schadek"
+  social_links:
+    - id: ltenv5vt
+      title: Facebook
+      link: "https://www.facebook.com/juergen.schadek.de"
+      icon: icons/facebook.svg
+    - id: ltenvihn
+      title: Instagram
+      link: "https://www.instagram.com/juergen.schadek/"
+      icon: icons/instagram.svg
+    - id: ltenvtxa
+      title: X
+      link: "https://x.com/juergen_schadek/"
+      icon: icons/x.svg
+    - id: ltenw1qk
+      title: XING
+      link: "https://www.xing.com/profile/Juergen_Schadek/"
+      icon: icons/xing.svg
+    - id: ltenwflo
+      title: LinkedIn
+      link: "https://www.linkedin.com/in/juergenschadek/"
+      icon: icons/linkedin.svg
+    - id: ltenwt0y
+      title: GitHub
+      link: "https://github.com/juergen-schadek/"
+      icon: icons/github.svg
+    - id: ltenx43q
+      title: YouTube
+      link: "https://www.youtube.com/@Juergen.Schadek/"
+      icon: icons/youtube.svg
+    - id: ltenxdf0
+      title: TikTok
+      link: "https://www.tiktok.com/@juergen_schadek"
+      icon: icons/tiktok.svg
+  copyright: |-
+    {{ svg src="/assets/icons/outline/code-bracket" class="inline-flex h-4 w-4" }} with {{ svg src="/assets/icons/outline/heart" class="inline-flex h-4 w-4" }} from Jürgen Schadek and {{ svg src="/assets/icons/outline/lifebuoy" class="inline-flex h-4 w-4" }} from Statamic and Tailwind CSS.<br />
+    &copy; {{ date format="Y" }} Jürgen Schadek. All rights reserved.
+  meta_informations_rss_feed: /feed/

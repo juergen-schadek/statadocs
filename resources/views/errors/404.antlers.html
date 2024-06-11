@@ -1,0 +1,33 @@
+<main class="space-y-6 px-4 py-10 sm:px-6 lg:px-8">
+    <header>
+        <h1
+            class="mb-6 text-3xl font-bold leading-tight text-heading dark:text-heading-inverted"
+        >
+            {{ trans:statadocs.error_404 }}
+        </h1>
+        <h2
+            class="mb-6 text-2xl font-semibold text-heading dark:text-heading-inverted"
+        >
+            {{ trans:statadocs.error_404_heading }}
+        </h2>
+
+        <div class="flex">
+            <hr class="w-24 border-t-4 border-primary" />
+        </div>
+    </header>
+    <article>
+        <div
+            class="{{ settings:typography }} prose max-w-screen-lg dark:prose-invert"
+        >
+            {{ trans:statadocs.error_404_text }}
+        </div>
+        <div class="mt-10 flex items-center justify-start gap-x-6">
+            <a
+                class="flex items-center justify-center rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-heading-inverted shadow-sm hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="{{ site:permalink }}"
+            >
+                {{ trans:statadocs.back_to_homepage }}
+            </a>
+        </div>
+    </article>
+</main>

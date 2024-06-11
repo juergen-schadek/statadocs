@@ -1,0 +1,18 @@
+title: Bookmarks
+template: default
+layout: layout
+mount: b6b5f17f-09fb-4f4f-961e-206d9b615b5d
+taxonomies:
+  - categories
+  - tags
+revisions: false
+route: '{mount}/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

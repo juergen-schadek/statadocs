@@ -1,0 +1,35 @@
+<main class="space-y-6 px-4 py-10 sm:px-6 lg:px-8">
+    <header>
+        <h1
+            class="mb-6 text-3xl font-bold leading-tight text-heading dark:text-heading-inverted"
+        >
+            {{ title }}
+        </h1>
+        {{ if subtitle }}
+            <h2
+                class="mb-6 text-2xl font-semibold text-heading dark:text-heading-inverted"
+            >
+                {{ subtitle }}
+            </h2>
+        {{ /if }}
+        <div class="flex">
+            <hr class="w-24 border-t-4 border-primary" />
+        </div>
+    </header>
+    {{ collection from="apps|bookmarks" favorite:is="true" as="favorites" }}
+        {{ if !no_results }}
+            <section id="favorites" class="">
+                <div class="flex flex-wrap gap-2">
+                    {{ favorites }}
+                        {{ partial:tile }}
+                    {{ /favorites }}
+                </div>
+            </section>
+        {{ /if }}
+    {{ /collection }}
+    <article
+        class="{{ settings:typography }} prose max-w-screen-lg dark:prose-invert"
+    >
+        {{ content }}
+    </article>
+</main>

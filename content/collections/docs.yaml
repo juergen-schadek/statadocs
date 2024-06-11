@@ -1,0 +1,18 @@
+title: Documents
+template: docs/show
+layout: layout
+mount: 7d435890-a823-480e-8156-7d61b4f866b9
+taxonomies:
+  - categories
+  - tags
+revisions: false
+route: '{mount}/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

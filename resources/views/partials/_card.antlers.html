@@ -1,0 +1,22 @@
+<div class="group relative flex h-14 w-80 rounded-md shadow-sm">
+    <div
+        class="flex w-16 flex-shrink-0 items-center justify-center rounded-l-md bg-element-alt fill-text-inverted text-text-inverted group-hover:fill-primary group-hover:text-primary"
+    >
+        {{ svg class="h-8 w-8" :src="icon" }}
+    </div>
+    <div
+        class="flex flex-1 items-start justify-start truncate rounded-r-md bg-element dark:bg-dark-element"
+    >
+        <div class="flex-1 truncate px-4 py-2 text-sm">
+            <a href="{{ link }}" target="_blank">
+                <span class="absolute inset-0" aria-hidden="true"></span>
+                <h3
+                    class="font-medium text-heading group-hover:text-primary dark:text-heading-inverted"
+                >
+                    {{ title }}
+                </h3>
+                <p class="text-text-muted">{{ content }}</p>
+            </a>
+        </div>
+    </div>
+</div>

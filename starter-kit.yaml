@@ -1,0 +1,17 @@
+export_paths:
+  - content
+  - public/assets
+  - resources/blueprints
+  - resources/css/site.css
+  - resources/fieldsets
+  - resources/fonts
+  - resources/js/site.js
+  - resources/lang
+  - resources/views
+  - .editorconfig
+  - .prettierrc
+  - package.json
+  - postcss.config.js
+  - tailwind.config.js
+dependencies:
+  statamic/seo-pro: ^6.0

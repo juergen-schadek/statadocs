@@ -1,0 +1,25 @@
+title: Markdown
+fields:
+  -
+    handle: markdown
+    field:
+      container: assets
+      buttons:
+        - bold
+        - italic
+        - strikethrough
+        - unorderedlist
+        - orderedlist
+        - quote
+        - table
+        - image
+        - asset
+        - link
+        - code
+        - codeblock
+      automatic_links: true
+      smartypants: true
+      antlers: true
+      type: markdown
+      display: Markdown
+      listable: false

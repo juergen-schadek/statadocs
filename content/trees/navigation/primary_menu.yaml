@@ -1,0 +1,21 @@
+tree:
+  -
+    id: d629dbd5-5709-41a1-b98b-9a5792fe72d2
+    entry: home
+    data:
+      icon: icons/outline/home.svg
+  -
+    id: 519ef4b5-dd93-4757-9d4b-2c9be22ba45c
+    entry: 60f5d040-e4f9-416b-97db-42ffbb394744
+    data:
+      icon: icons/outline/beaker.svg
+  -
+    id: 0bf2f5be-8a23-4cb6-812d-ee9b89547240
+    entry: b6b5f17f-09fb-4f4f-961e-206d9b615b5d
+    data:
+      icon: icons/outline/bookmark-square.svg
+  -
+    id: 920d8512-6751-4ff3-8798-4b047fe7e30e
+    entry: 7d435890-a823-480e-8156-7d61b4f866b9
+    data:
+      icon: icons/outline/document-text.svg
